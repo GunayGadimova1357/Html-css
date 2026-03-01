@@ -1,0 +1,403 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  height: 1350px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #000000;
+  padding: 20px;
+}
+
+.sidebar .navigation {
+  margin: 0 0 0 0;
+  background-color: #121212;
+  border-radius: 7px;
+  padding: 15px;
+
+}
+
+.sidebar .navigation ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar .navigation ul li {
+  padding: 10px 0px;
+}
+
+.sidebar .navigation ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.sidebar .navigation ul li a:hover {
+  color: #ffffff;
+}
+
+.sidebar .navigation .icon {
+  padding: 10px;
+}
+
+.sidebar .navigation2 {
+  margin: 20px 0 0 0;
+  background-color: #121212;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.sidebar .navigation2 a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.sidebar .navigation2 .icon {
+  padding: 10px;
+}
+
+.create-playlist,
+.browse-podcasts {
+  margin: 15px 0 0 0;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.create-playlist p,
+.browse-podcasts p {
+  margin: 0 0 10px 0;
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.create-playlist span,
+.browse-podcasts span {
+  display: block;
+  font-size: 0.9em;
+  color: #aaaaaa;
+  margin: 5px 0 0 0;
+
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.legal-links {
+  margin: 15px 0 0 0;
+}
+
+.legal-links a {
+  display: flex;
+  color: #7c7c7c;
+  font-size: 0.8em;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.legal-links a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  margin: 20px 0 0 0;
+  background: linear-gradient(180deg, rgba(30, 31, 30, 0.9738270308123249) 33%, rgba(18, 18, 18, 1) 100%);
+  position: relative;
+  left: 340px;
+  padding: 0 0 0 0;
+  width: 1100px;
+}
+
+.menu .topbar {
+  position: sticky;
+  top: 0;
+  width: 1100px;
+  height: 60px;
+  background-color: #101010;
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.topbar .buttons button {
+  color: #7a7a7a;
+  cursor: not-allowed;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  font-size: 18px;
+  background-color: #090909;
+  margin: 10px 10px 10px 10px;
+}
+
+.topbar .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar .navbar ul {
+  list-style: none;
+}
+
+.topbar .navbar ul li .sign a {
+  margin: 0px 8px;
+  width: 70px;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.topbar .navbar .log a {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 25px;
+  border-radius: 40px;
+  margin-left: 15px;
+}
+
+.playlist h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 20px 0 20px 10px;
+}
+
+.playlist .artists {
+  display: flex;
+  gap: 10px;
+}
+
+.playlist .artists .artist {
+  width: 140px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.playlist .artists .artist:hover {
+  background-color: #252525;
+}
+
+
+
+.playlist .artists .artist img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.playlist .artists .artist .play {
+  position: relative;
+}
+
+.playlist .artists .artist .play img {
+  position: absolute;
+  left: 70px;
+  top: -60px;
+  padding: 18px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.playlist .artists .artist:hover .play img {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.playlist .artists .artist h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.playlist .artists .artist p {
+  color: #989898;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+
+}
+
+.playlist .list {
+  display: flex;
+  gap: 10px;
+}
+
+.playlist .list .item {
+  width: 145px;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.playlist .list .item:hover {
+  background-color: #252525;
+}
+
+
+.playlist .list .item img {
+  width: 150px;
+  height: 150px;
+}
+
+.playlist .list .item .play {
+  position: relative;
+}
+
+.playlist .list .item .play img {
+  position: absolute;
+  left: 70px;
+  top: -60px;
+  padding: 18px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.playlist .list .item:hover .play img {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.playlist .list .item h4 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.playlist .list .item p {
+  color: #989898;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.preview {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #ae2896, #509bf5);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview h5 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.preview .button .free {
+  position: relative;
+  bottom: -10px;
+}
+
+.preview p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.preview .button .free a {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 20px;
+  border-radius: 40px;
+}
+
+.footer {
+  width: 1100px;
+  position: relative;
+  left: 340px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: #fff;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
